@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MoviesTableViewController.h
 //  Nuvies
 //
 //  Created by Riccardo Scanavacca on 04/05/2016.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface MoviesTableViewController : UITableViewController
 
 @end
-
