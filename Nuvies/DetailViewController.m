@@ -22,15 +22,14 @@
     
     self.movie = [[Movies alloc]initWithMovieTitle:self.movieTitle];
     self.navigationController.title = self.movieTitle;
-
-
+    
 }
 
 
 
 -(void)loadDetailView {
     
-    CFRunLoopWakeUp(CFRunLoopGetCurrent());
+
     self.country.text = self.movie.country;
     self.director.text = self.movie.director;
     self.actors.text = self.movie.actors;

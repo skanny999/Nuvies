@@ -74,9 +74,6 @@
 -(void)getMovieWithTitle:(NSString *)movieTitle onCompletion:(nullable onComplete)completionHandler{
     
     NSString *encodedMovieTitle = [self stringByAddingPercentEncodingForFormData:movieTitle];
-//    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-//    [formatter setDateFormat:@"yyyy"];
-//    NSString *year = [formatter stringFromDate:[NSDate date]];
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat: @"http://www.omdbapi.com/?t=%@+&y=&plot=full&r=json",encodedMovieTitle]];
     NSLog(@"%@", url);
 
