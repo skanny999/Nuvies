@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+
 typedef void (^onComplete)(NSDictionary * __nullable dataDict, NSString * __nullable errorMessage);
 
 @interface Movies : NSObject
@@ -19,6 +20,7 @@ typedef void (^onComplete)(NSDictionary * __nullable dataDict, NSString * __null
 @property (nonatomic, strong) NSString * _Nonnull genre;
 @property (nonatomic, strong) NSString * _Nonnull plot;
 @property (nonatomic, strong) NSString * _Nonnull metascore;
+
 
 -(id _Nonnull)initWithMovieTitle:(NSString * _Nonnull)aMovie;
 

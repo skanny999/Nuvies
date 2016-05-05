@@ -7,6 +7,7 @@
 //
 
 #import "MoviesTableViewController.h"
+#import "DetailViewController.h"
 
 @interface MoviesTableViewController ()
 
@@ -60,6 +61,30 @@
     cell.textLabel.text = [self.movieList objectAtIndex:indexPath.row];
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    NSString *movieTitle = [self.movieList objectAtIndex:indexPath.row];
+    [self performSegueWithIdentifier:@"MovieDetails" sender:movieTitle];
+    
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if([segue.identifier isEqualToString:@"MovieDetails"]) {
+        
+        NSString *selectedMovie = (NSString *) sender;
+        DetailViewController *destinationViewController = (DetailViewController *) segue.destinationViewController;
+        
+        if (selectedMovie && destinationViewController) {
+            destinationViewController.movieTitle = selectedMovie;
+        } else {
+            NSLog(@"Cannot perform segue");
+        }
+    }
+    
+    
 }
 
 

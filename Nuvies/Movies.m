@@ -10,19 +10,16 @@
 
 @implementation Movies
 
-//@property (nonatomic, strong) NSString * _Nonnull title;
-//@property (nonatomic, strong) NSString * _Nonnull actors;
-//@property (nonatomic, strong) NSString * _Nonnull country;
-//@property (nonatomic, strong) NSString * _Nonnull director;
-//@property (nonatomic, strong) NSString * _Nonnull genre;
-//@property (nonatomic, strong) NSString * _Nonnull plot;
-//@property (nonatomic, strong) NSString * _Nonnull metascore;
 
 -(id)initWithMovieTitle:(NSString * _Nonnull)aMovie {
+ 
     
     if (self = [super init]) {
         [self getMovieWithTitle:aMovie onCompletion:^(NSDictionary * _Nullable dataDict, NSString * _Nullable errorMessage) {
             if (dataDict) {
+                
+                NSLog(@"%@", dataDict.debugDescription);
+                
                 NSString *title = (NSString *) [dataDict valueForKey:@"Title"];
                 if (title) {
                     self.title = title;
@@ -41,6 +38,8 @@
                 NSString *director = (NSString *) [dataDict valueForKey:@"Director"];
                 if (director) {
                     self.director = director;
+                } else {
+                    self.director = @"";
                 }
                 
                 NSString *genre = (NSString *) [dataDict valueForKey:@"Genre"];
@@ -49,19 +48,25 @@
                 }
                 
                 NSString *plot = (NSString *) [dataDict valueForKey:@"Plot"];
-                if(plot) {
+                if (plot) {
                     self.plot = plot;
                 }
                 
                 NSString *metascore = (NSString *) [dataDict valueForKey:@"Metascore"];
                 if (metascore) {
                     self.metascore = metascore;
+
                 }
                 
+              
             }
+            
+            [[NSNotificationCenter defaultCenter]postNotificationName:@"downloaded" object:nil];
+            NSLog(@"notification posted");
         }];
     }
-    
+
+
     return self;
 }
 
@@ -69,11 +74,12 @@
 -(void)getMovieWithTitle:(NSString *)movieTitle onCompletion:(nullable onComplete)completionHandler{
     
     NSString *encodedMovieTitle = [self stringByAddingPercentEncodingForFormData:movieTitle];
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"yyyy"];
-    NSString *year = [formatter stringFromDate:[NSDate date]];
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat: @"http://www.omdbapi.com/?t=%@&y=%@&plot=full&r=json",encodedMovieTitle,year]];
-    
+//    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+//    [formatter setDateFormat:@"yyyy"];
+//    NSString *year = [formatter stringFromDate:[NSDate date]];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat: @"http://www.omdbapi.com/?t=%@+&y=&plot=full&r=json",encodedMovieTitle]];
+    NSLog(@"%@", url);
+
     NSURLSession *session = [NSURLSession sharedSession];
     
     [[session dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {

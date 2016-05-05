@@ -7,6 +7,7 @@
 //
 
 #import "DetailViewController.h"
+#import "Movies.h"
 
 @interface DetailViewController ()
 
@@ -15,46 +16,38 @@
 @implementation DetailViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc]init];
-    [request setURL:[NSURL URLWithString:@"http://www.omdbapi.com/?t=Code+of+Honor+&y=2016&plot=full&r=json"]];
     
-    NSURLSessionDataTask *task = [[self getURLSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            NSLog(@"%@", data);
-        });
-    }];
+
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(loadDetailView) name:@"downloaded" object:nil];
     
-    [task resume];
+    self.movie = [[Movies alloc]initWithMovieTitle:self.movieTitle];
+    self.navigationController.title = self.movieTitle;
+
+
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+
+-(void)loadDetailView {
+    
+    CFRunLoopWakeUp(CFRunLoopGetCurrent());
+    self.country.text = self.movie.country;
+    self.director.text = self.movie.director;
+    self.actors.text = self.movie.actors;
+    self.genre.text = self.movie.genre;
+    
+    self.metascore.text = self.movie.metascore;
+    self.plot.text = self.movie.plot;
+    
+    [self viewWillAppear:YES];
+    [self.presentedViewController setNeedsFocusUpdate];
+
+    NSLog(@"load page called");
+    
 }
 
--(NSURLSession *) getURLSession {
-    static NSURLSession *session = nil;
-    static dispatch_once_t onceToken;
-    
-    dispatch_once( &onceToken, ^{
-    
-        NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
-        session = [NSURLSession sessionWithConfiguration:configuration];
 
-    });
-    
-    return session;
-}
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
