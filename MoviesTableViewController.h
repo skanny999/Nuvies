@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MoviesTableViewController : UITableViewController
+@interface MoviesTableViewController : UITableViewController <NSXMLParserDelegate>
+
+@property (nonatomic, strong) NSString *element;
+@property (nonatomic, strong) NSString *filmTitle;
+@property (nonatomic, strong) NSMutableArray *movieList;
 
 @end

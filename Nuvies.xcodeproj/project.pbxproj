@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		8B9C33C61CDA3E14001CD9D8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B9C33C51CDA3E14001CD9D8 /* main.m */; };
 		8B9C33C91CDA3E14001CD9D8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B9C33C81CDA3E14001CD9D8 /* AppDelegate.m */; };
-		8B9C33CC1CDA3E14001CD9D8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B9C33CB1CDA3E14001CD9D8 /* ViewController.m */; };
 		8B9C33CF1CDA3E14001CD9D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B9C33CD1CDA3E14001CD9D8 /* Main.storyboard */; };
 		8B9C33D11CDA3E14001CD9D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B9C33D01CDA3E14001CD9D8 /* Assets.xcassets */; };
 		8B9C33D41CDA3E14001CD9D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B9C33D21CDA3E14001CD9D8 /* LaunchScreen.storyboard */; };
 		8B9C33DF1CDA3E14001CD9D8 /* NuviesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B9C33DE1CDA3E14001CD9D8 /* NuviesTests.m */; };
 		8B9C33EA1CDA3E14001CD9D8 /* NuviesUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B9C33E91CDA3E14001CD9D8 /* NuviesUITests.m */; };
+		8B9C33FC1CDA3F96001CD9D8 /* MoviesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B9C33FB1CDA3F96001CD9D8 /* MoviesTableViewController.m */; };
+		8B9C33FF1CDA5994001CD9D8 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B9C33FE1CDA5994001CD9D8 /* DetailViewController.m */; };
+		8B9C34031CDB84B2001CD9D8 /* Movies.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B9C34021CDB84B2001CD9D8 /* Movies.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +41,6 @@
 		8B9C33C51CDA3E14001CD9D8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8B9C33C71CDA3E14001CD9D8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8B9C33C81CDA3E14001CD9D8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8B9C33CA1CDA3E14001CD9D8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8B9C33CB1CDA3E14001CD9D8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8B9C33CE1CDA3E14001CD9D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8B9C33D01CDA3E14001CD9D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B9C33D31CDA3E14001CD9D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +51,12 @@
 		8B9C33E51CDA3E14001CD9D8 /* NuviesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NuviesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B9C33E91CDA3E14001CD9D8 /* NuviesUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NuviesUITests.m; sourceTree = "<group>"; };
 		8B9C33EB1CDA3E14001CD9D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B9C33FA1CDA3F96001CD9D8 /* MoviesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MoviesTableViewController.h; path = ../MoviesTableViewController.h; sourceTree = "<group>"; };
+		8B9C33FB1CDA3F96001CD9D8 /* MoviesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MoviesTableViewController.m; path = ../MoviesTableViewController.m; sourceTree = "<group>"; };
+		8B9C33FD1CDA5994001CD9D8 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		8B9C33FE1CDA5994001CD9D8 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		8B9C34011CDB84B2001CD9D8 /* Movies.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movies.h; sourceTree = "<group>"; };
+		8B9C34021CDB84B2001CD9D8 /* Movies.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movies.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +107,13 @@
 		8B9C33C31CDA3E14001CD9D8 /* Nuvies */ = {
 			isa = PBXGroup;
 			children = (
+				8B9C34001CDB82E9001CD9D8 /* Model */,
 				8B9C33C71CDA3E14001CD9D8 /* AppDelegate.h */,
 				8B9C33C81CDA3E14001CD9D8 /* AppDelegate.m */,
-				8B9C33CA1CDA3E14001CD9D8 /* ViewController.h */,
-				8B9C33CB1CDA3E14001CD9D8 /* ViewController.m */,
+				8B9C33FA1CDA3F96001CD9D8 /* MoviesTableViewController.h */,
+				8B9C33FB1CDA3F96001CD9D8 /* MoviesTableViewController.m */,
+				8B9C33FD1CDA5994001CD9D8 /* DetailViewController.h */,
+				8B9C33FE1CDA5994001CD9D8 /* DetailViewController.m */,
 				8B9C33CD1CDA3E14001CD9D8 /* Main.storyboard */,
 				8B9C33D01CDA3E14001CD9D8 /* Assets.xcassets */,
 				8B9C33D21CDA3E14001CD9D8 /* LaunchScreen.storyboard */,
@@ -138,6 +147,15 @@
 				8B9C33EB1CDA3E14001CD9D8 /* Info.plist */,
 			);
 			path = NuviesUITests;
+			sourceTree = "<group>";
+		};
+		8B9C34001CDB82E9001CD9D8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8B9C34011CDB84B2001CD9D8 /* Movies.h */,
+				8B9C34021CDB84B2001CD9D8 /* Movies.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,9 +288,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B9C33CC1CDA3E14001CD9D8 /* ViewController.m in Sources */,
 				8B9C33C91CDA3E14001CD9D8 /* AppDelegate.m in Sources */,
+				8B9C33FC1CDA3F96001CD9D8 /* MoviesTableViewController.m in Sources */,
+				8B9C34031CDB84B2001CD9D8 /* Movies.m in Sources */,
 				8B9C33C61CDA3E14001CD9D8 /* main.m in Sources */,
+				8B9C33FF1CDA5994001CD9D8 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
