@@ -16,7 +16,10 @@
 		8B9C33EA1CDA3E14001CD9D8 /* NuviesUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B9C33E91CDA3E14001CD9D8 /* NuviesUITests.m */; };
 		8B9C33FC1CDA3F96001CD9D8 /* MoviesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B9C33FB1CDA3F96001CD9D8 /* MoviesTableViewController.m */; };
 		8B9C33FF1CDA5994001CD9D8 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B9C33FE1CDA5994001CD9D8 /* DetailViewController.m */; };
-		8B9C34031CDB84B2001CD9D8 /* Movies.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B9C34021CDB84B2001CD9D8 /* Movies.m */; };
+		8B9C34061CDCC85F001CD9D8 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B9C34051CDCC85F001CD9D8 /* Movie.m */; };
+		8B9C340A1CDCC8F9001CD9D8 /* NetworkController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B9C34091CDCC8F9001CD9D8 /* NetworkController.m */; };
+		8B9C340D1CDCC91F001CD9D8 /* MovieParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B9C340C1CDCC91F001CD9D8 /* MovieParser.m */; };
+		8B9C34101CDCC92E001CD9D8 /* MovieFeedParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B9C340F1CDCC92E001CD9D8 /* MovieFeedParser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,8 +58,14 @@
 		8B9C33FB1CDA3F96001CD9D8 /* MoviesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MoviesTableViewController.m; path = ../MoviesTableViewController.m; sourceTree = "<group>"; };
 		8B9C33FD1CDA5994001CD9D8 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		8B9C33FE1CDA5994001CD9D8 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
-		8B9C34011CDB84B2001CD9D8 /* Movies.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movies.h; sourceTree = "<group>"; };
-		8B9C34021CDB84B2001CD9D8 /* Movies.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movies.m; sourceTree = "<group>"; };
+		8B9C34041CDCC85F001CD9D8 /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
+		8B9C34051CDCC85F001CD9D8 /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
+		8B9C34081CDCC8F9001CD9D8 /* NetworkController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkController.h; sourceTree = "<group>"; };
+		8B9C34091CDCC8F9001CD9D8 /* NetworkController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkController.m; sourceTree = "<group>"; };
+		8B9C340B1CDCC91F001CD9D8 /* MovieParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieParser.h; sourceTree = "<group>"; };
+		8B9C340C1CDCC91F001CD9D8 /* MovieParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieParser.m; sourceTree = "<group>"; };
+		8B9C340E1CDCC92E001CD9D8 /* MovieFeedParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieFeedParser.h; sourceTree = "<group>"; };
+		8B9C340F1CDCC92E001CD9D8 /* MovieFeedParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieFeedParser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,13 +116,11 @@
 		8B9C33C31CDA3E14001CD9D8 /* Nuvies */ = {
 			isa = PBXGroup;
 			children = (
-				8B9C34001CDB82E9001CD9D8 /* Model */,
 				8B9C33C71CDA3E14001CD9D8 /* AppDelegate.h */,
 				8B9C33C81CDA3E14001CD9D8 /* AppDelegate.m */,
-				8B9C33FA1CDA3F96001CD9D8 /* MoviesTableViewController.h */,
-				8B9C33FB1CDA3F96001CD9D8 /* MoviesTableViewController.m */,
-				8B9C33FD1CDA5994001CD9D8 /* DetailViewController.h */,
-				8B9C33FE1CDA5994001CD9D8 /* DetailViewController.m */,
+				8B9C34071CDCC8D8001CD9D8 /* Services */,
+				8B9C34001CDB82E9001CD9D8 /* Model */,
+				8B9C34111CDCE73F001CD9D8 /* View Controller */,
 				8B9C33CD1CDA3E14001CD9D8 /* Main.storyboard */,
 				8B9C33D01CDA3E14001CD9D8 /* Assets.xcassets */,
 				8B9C33D21CDA3E14001CD9D8 /* LaunchScreen.storyboard */,
@@ -152,10 +159,34 @@
 		8B9C34001CDB82E9001CD9D8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8B9C34011CDB84B2001CD9D8 /* Movies.h */,
-				8B9C34021CDB84B2001CD9D8 /* Movies.m */,
+				8B9C34041CDCC85F001CD9D8 /* Movie.h */,
+				8B9C34051CDCC85F001CD9D8 /* Movie.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		8B9C34071CDCC8D8001CD9D8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8B9C34081CDCC8F9001CD9D8 /* NetworkController.h */,
+				8B9C34091CDCC8F9001CD9D8 /* NetworkController.m */,
+				8B9C340B1CDCC91F001CD9D8 /* MovieParser.h */,
+				8B9C340C1CDCC91F001CD9D8 /* MovieParser.m */,
+				8B9C340E1CDCC92E001CD9D8 /* MovieFeedParser.h */,
+				8B9C340F1CDCC92E001CD9D8 /* MovieFeedParser.m */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		8B9C34111CDCE73F001CD9D8 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8B9C33FA1CDA3F96001CD9D8 /* MoviesTableViewController.h */,
+				8B9C33FB1CDA3F96001CD9D8 /* MoviesTableViewController.m */,
+				8B9C33FD1CDA5994001CD9D8 /* DetailViewController.h */,
+				8B9C33FE1CDA5994001CD9D8 /* DetailViewController.m */,
+			);
+			name = "View Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,9 +319,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B9C34061CDCC85F001CD9D8 /* Movie.m in Sources */,
 				8B9C33C91CDA3E14001CD9D8 /* AppDelegate.m in Sources */,
 				8B9C33FC1CDA3F96001CD9D8 /* MoviesTableViewController.m in Sources */,
-				8B9C34031CDB84B2001CD9D8 /* Movies.m in Sources */,
+				8B9C34101CDCC92E001CD9D8 /* MovieFeedParser.m in Sources */,
+				8B9C340A1CDCC8F9001CD9D8 /* NetworkController.m in Sources */,
+				8B9C340D1CDCC91F001CD9D8 /* MovieParser.m in Sources */,
 				8B9C33C61CDA3E14001CD9D8 /* main.m in Sources */,
 				8B9C33FF1CDA5994001CD9D8 /* DetailViewController.m in Sources */,
 			);

@@ -8,6 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MovieFeedParser : NSObject
+@interface MovieFeedParser : NSObject <NSXMLParserDelegate>
+
+@property (nonatomic, strong, readonly) NSMutableArray * _Nonnull movieList;
+
+- (instancetype _Nonnull) initWithURL:(NSURL * _Nonnull)url;
+- (void) parse;
+
 
 @end

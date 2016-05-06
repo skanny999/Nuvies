@@ -7,7 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Movie.h"
+
+typedef void (^onComplete) (Movie * __nullable movie, NSString * __nullable errorMessage);
 
 @interface NetworkController : NSObject
+
++ (NSURLSessionTask * _Nonnull) movieWithTitle:(NSString * __nullable)movieTitle onCompletion:(nullable onComplete)completionHandler;
+
++ (NSArray *_Nonnull)movieTitlesFeed;
 
 @end

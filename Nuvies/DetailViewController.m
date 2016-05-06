@@ -7,7 +7,8 @@
 //
 
 #import "DetailViewController.h"
-#import "Movies.h"
+#import "Movie.h"
+#import "NetworkController.h"
 
 @interface DetailViewController ()
 
@@ -17,11 +18,16 @@
 
 - (void)viewDidLoad {
     
-
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(loadDetailView) name:@"downloaded" object:nil];
+    [super viewDidLoad];
     
-    self.movie = [[Movies alloc]initWithMovieTitle:self.movieTitle];
-    self.navigationController.title = self.movieTitle;
+    self.title = self.movieTitle;
+    
+    [NetworkController movieWithTitle:self.movieTitle onCompletion:^(Movie * _Nullable movie, NSString * _Nullable errorMessage) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.movie = movie;
+            [self loadDetailView];
+        });
+    }];
     
 }
 
@@ -38,10 +44,7 @@
     self.metascore.text = self.movie.metascore;
     self.plot.text = self.movie.plot;
     
-    [self viewWillAppear:YES];
-    [self.presentedViewController setNeedsFocusUpdate];
 
-    NSLog(@"load page called");
     
 }
 

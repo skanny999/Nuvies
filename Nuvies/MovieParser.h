@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Movie.h"
 
 @interface MovieParser : NSObject
+
++(Movie * _Nonnull) movieFromDataDictionary: (NSDictionary * _Nonnull) dataDictionary;
 
 @end
